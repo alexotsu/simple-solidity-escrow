@@ -18,8 +18,7 @@ contract CommonTest is Test {
   IERC721 mayc = IERC721(_mayc);
   IERC20 dai = IERC20(_dai);
   IERC20 uni = IERC20(_uni);
-
-  // uint erc20Amt = 100000000;
+  
   function _setUpNFTDeposit(address addr, uint erc20Amt) public {
     vm.startPrank(mayc.ownerOf(_id));
     mayc.approve(address(escrow), _id);
